@@ -1,4 +1,6 @@
+import 'package:awesome_places/pages/natural.wonders.dart';
 import 'package:awesome_places/utils/colors.dart';
+import 'package:awesome_places/widget/home_page/category_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,6 +14,7 @@ class HomePage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,7 +52,70 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 16, color: mainTextColor),
                 ),
                 const SizedBox(height: 10),
-                Image.asset("assets/sigiriya.jpg"),
+                Image.asset(
+                  "assets/sigiriya.jpg",
+
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  "Select a Place from categories",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: mainColor,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NaturalWondersPage(),
+                          ),
+                        );
+                      },
+                      child: const CategoryCard(
+                        category: "Natural Wonders",
+                        cardBgColor: firstCategoryColor,
+                        cardWidth: 180,
+                      ),
+                    ),
+                    CategoryCard(
+                      category: "Nightlife",
+                      cardBgColor: firstCategoryColor,
+                      cardWidth: 180,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CategoryCard(
+                      category: "Landmarks",
+                      cardBgColor: secondCategoryColor,
+                      cardWidth: 180,
+                    ),
+                    CategoryCard(
+                      category: "Cultural",
+                      cardBgColor: secondCategoryColor,
+                      cardWidth: 180,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                const CategoryCard(
+                  category: "Book For A Ride Today!",
+                  cardBgColor: thirdCategoryColor,
+                  cardWidth: 380,
+                ),
+                const SizedBox(height: 20),
               ],
             ),
           ),
