@@ -1,6 +1,6 @@
 import 'package:awesome_places/pages/natural.wonders.dart';
 import 'package:awesome_places/utils/colors.dart';
-import 'package:awesome_places/widget/home_page/category_card.dart';
+import 'package:awesome_places/widget/resuable/home_page/category_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
