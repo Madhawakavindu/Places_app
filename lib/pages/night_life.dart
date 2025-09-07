@@ -2,19 +2,19 @@ import 'package:awesome_places/utils/colors.dart';
 import 'package:awesome_places/widget/resuable/image_card.dart';
 import 'package:flutter/material.dart';
 
-class NaturalWondersPage extends StatelessWidget {
-  const NaturalWondersPage({super.key});
+class NightLifePage extends StatelessWidget {
+  const NightLifePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Natural Wonders",
+          "Night Life",
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.w600,
-            color: mainNaturalWondersColor,
+            color: mainNightLifeColor,
           ),
         ),
       ),
@@ -33,54 +33,23 @@ class NaturalWondersPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ImageCard(
-                title: "Natural Wonders Place-1",
+                title: "Night Life Place-1",
                 description:
                     "This incredible archaeological rock fortress, that rises out of the earth to dominate the landscape, was also given UNESCO status in 1982. Known also as the Lion’s Rock, it is located in the centre of the island and is the most popular tourist destination on the island, which is not surprising. It has the remains of a 5th century palace, which is accessible by stairs built on the side. Those who make the climb are rewarded with stunning 360° views as well as the well-preserved remains.",
 
-                imageUrl: "assets/natu.jpg",
-                isCornerRounded: false,
-                titleColor: subNaturalWondersColor,
+                imageUrl: "assets/sisun1.jpg",
+                isCornerRounded: true,
+                titleColor: subNightLifeColor,
               ),
-              const SizedBox(height: 20),
               ImageCard(
-                title: "Natural Wonders Place-2",
+                title: "Night Life Place-2",
                 description:
                     "This decent museum has a fine diorama of the site, providing an excellent overview and explaining Sigiriya's cultural importance beyond the obvious natural beauty. The theory that Sigiriya was a Buddhist monastery is given here, although the established position that it was a palace or fortress prevails.",
 
-                imageUrl: "assets/natu1.jpg",
-                isCornerRounded: false,
-                titleColor: subNaturalWondersColor,
+                imageUrl: "assets/sisun2.jpg",
+                isCornerRounded: true,
+                titleColor: subNightLifeColor,
               ),
-              const SizedBox(height: 20),
-              ImageCard(
-                title: "Natural Wonders Place-3",
-                description:
-                    "This museum offers an educational experience, providing excellent background information. It features photo galleries of excavations conducted at the Sigiriya fortress rock",
-
-                imageUrl: "assets/natural2.jpg",
-                isCornerRounded: false,
-                titleColor: subNaturalWondersColor,
-              ),
-              const SizedBox(height: 20),
-              ImageCard(
-                title: "Natural Wonders Place-4",
-                description:
-                    " Sigiriya in Sri Lanka, also known as Lion Rock, is a breathtaking architectural marvel located in the heart of Sri Lanka. ",
-
-                imageUrl: "assets/natural3.jpg",
-                isCornerRounded: false,
-                titleColor: subNaturalWondersColor,
-              ),
-              ImageCard(
-                title: "Natural Wonders Place-5",
-                description:
-                    " The Sigiriya frescoes are among the most famous and captivating elements of Sigiriya, also known as Lion Rock, in Sri Lanka. These ancient frescoes, painted during the reign of King Kashyapa I in the 5th century CE, are located on the western face of the massive rock fortress ",
-
-                imageUrl: "assets/natural4.jpg",
-                isCornerRounded: false,
-                titleColor: subNaturalWondersColor,
-              ),
-              const SizedBox(height: 20),
             ],
           ),
         ),

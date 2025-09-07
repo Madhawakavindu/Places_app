@@ -1,5 +1,4 @@
 import 'package:awesome_places/pages/home_page.dart';
-import 'package:awesome_places/pages/natural.wonders.dart';
 import 'package:flutter/material.dart';
 
 void main() {

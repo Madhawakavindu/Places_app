@@ -1,4 +1,6 @@
+import 'package:awesome_places/pages/land_marks.dart';
 import 'package:awesome_places/pages/natural.wonders.dart';
+import 'package:awesome_places/pages/night_life.dart';
 import 'package:awesome_places/utils/colors.dart';
 import 'package:awesome_places/widget/resuable/home_page/category_card.dart';
 import 'package:flutter/material.dart';
@@ -86,21 +88,41 @@ class HomePage extends StatelessWidget {
                         cardWidth: 180,
                       ),
                     ),
-                    CategoryCard(
-                      category: "Nightlife",
-                      cardBgColor: firstCategoryColor,
-                      cardWidth: 180,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NightLifePage(),
+                          ),
+                        );
+                      },
+                      child: const CategoryCard(
+                        category: "Nightlife",
+                        cardBgColor: firstCategoryColor,
+                        cardWidth: 180,
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 12),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CategoryCard(
-                      category: "Landmarks",
-                      cardBgColor: secondCategoryColor,
-                      cardWidth: 180,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LandMarkspage(),
+                          ),
+                        );
+                      },
+                      child: const CategoryCard(
+                        category: "Landmarks",
+                        cardBgColor: secondCategoryColor,
+                        cardWidth: 180,
+                      ),
                     ),
                     CategoryCard(
                       category: "Cultural",
