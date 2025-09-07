@@ -1,3 +1,4 @@
+import 'package:awesome_places/pages/cultural_page.dart';
 import 'package:awesome_places/pages/land_marks.dart';
 import 'package:awesome_places/pages/natural.wonders.dart';
 import 'package:awesome_places/pages/night_life.dart';
@@ -124,10 +125,20 @@ class HomePage extends StatelessWidget {
                         cardWidth: 180,
                       ),
                     ),
-                    CategoryCard(
-                      category: "Cultural",
-                      cardBgColor: secondCategoryColor,
-                      cardWidth: 180,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CulturalPage(),
+                          ),
+                        );
+                      },
+                      child: const CategoryCard(
+                        category: "Cultural",
+                        cardBgColor: secondCategoryColor,
+                        cardWidth: 180,
+                      ),
                     ),
                   ],
                 ),

@@ -2,7 +2,16 @@ import 'package:awesome_places/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class LandMarksCard extends StatelessWidget {
-  const LandMarksCard({super.key});
+  final String title;
+  final String description;
+  final String imageUrl;
+
+  const LandMarksCard({
+    super.key,
+    required this.title,
+    required this.description,
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +22,7 @@ class LandMarksCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "title",
+              title,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
@@ -26,7 +35,8 @@ class LandMarksCard extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.network(
-                "https://www.usnews.com/object/image/00000169-5e06-df95-a57d-7ec6abfb0000/5-taj-mahal-getty.jpg?update-time=1706734280787&size=responsive640",
+                imageUrl,
+
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
@@ -35,7 +45,7 @@ class LandMarksCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "title",
+              description,
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
