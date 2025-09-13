@@ -1,3 +1,4 @@
+import 'package:awesome_places/pages/bookings_page/bookings.form.dart';
 import 'package:awesome_places/utils/colors.dart';
 import 'package:awesome_places/widget/resuable/bookings_page/vehical_card.dart';
 import 'package:awesome_places/widget/shared/ratings.dart';
@@ -123,6 +124,17 @@ class BookingsPage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 20),
+              Text(
+                "Fill The Details",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: mainColor,
+                ),
+              ),
+              SizedBox(height: 20),
+              BookingsForm(),
             ],
           ),
         ),

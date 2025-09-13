@@ -1,4 +1,4 @@
-import 'package:awesome_places/pages/bookings_page.dart';
+import 'package:awesome_places/pages/bookings_page/bookings_page.dart';
 import 'package:awesome_places/pages/cultural_page.dart';
 import 'package:awesome_places/pages/land_marks.dart';
 import 'package:awesome_places/pages/natural.wonders.dart';
