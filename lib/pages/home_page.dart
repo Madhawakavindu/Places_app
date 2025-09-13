@@ -1,3 +1,4 @@
+import 'package:awesome_places/pages/bookings_page.dart';
 import 'package:awesome_places/pages/cultural_page.dart';
 import 'package:awesome_places/pages/land_marks.dart';
 import 'package:awesome_places/pages/natural.wonders.dart';
@@ -143,10 +144,20 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 12),
-                const CategoryCard(
-                  category: "Book For A Ride Today!",
-                  cardBgColor: thirdCategoryColor,
-                  cardWidth: 380,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BookingsPage(),
+                      ),
+                    );
+                  },
+                  child: const CategoryCard(
+                    category: "Book For A Ride Today!",
+                    cardBgColor: thirdCategoryColor,
+                    cardWidth: 380,
+                  ),
                 ),
                 const SizedBox(height: 20),
               ],
